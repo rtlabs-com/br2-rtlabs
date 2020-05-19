@@ -1,0 +1,16 @@
+config BR2_PACKAGE_OPENER
+        bool "OpENer"
+        depends on BR2_TOOLCHAIN_HAS_THREADS
+        select BR2_PACKAGE_LIBCAP
+        help
+
+          OpENer is an EtherNet/IP™ stack for I/O adapter devices;
+          supports multiple I/O and explicit connections; includes
+          objects and services to make EtherNet/IP™- compliant
+          products defined in THE ETHERNET/IP SPECIFICATION and
+          published by ODVA (http://www.odva.org).
+
+          https://github.com/EIPStackGroup/OpENer
+
+comment "OpENer needs a toolchain w/ threads"
+        depends on !BR2_TOOLCHAIN_HAS_THREADS

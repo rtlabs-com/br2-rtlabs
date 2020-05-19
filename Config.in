@@ -6,3 +6,6 @@ source "$BR2_EXTERNAL_RTLABS_PATH/package/p-net/Config.in"
 # OpenEtherCATSociety
 source "$BR2_EXTERNAL_RTLABS_PATH/package/soem/Config.in"
 source "$BR2_EXTERNAL_RTLABS_PATH/package/soes/Config.in"
+
+# 3rd party
+source "$BR2_EXTERNAL_RTLABS_PATH/package/opener/Config.in"
