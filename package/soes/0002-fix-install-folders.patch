@@ -1,0 +1,40 @@
+From cc9905a82a41d57fba30a2576f014eb7ec8bc9c5 Mon Sep 17 00:00:00 2001
+From: Hans-Erik Floryd <hans-erik.floryd@rt-labs.com>
+Date: Tue, 19 May 2020 12:07:08 +0200
+Subject: [PATCH 2/2] fix install folders
+
+---
+ applications/linux_lan9252demo/CMakeLists.txt | 5 +++--
+ soes/CMakeLists.txt                           | 2 +-
+ 2 files changed, 4 insertions(+), 3 deletions(-)
+
+diff --git a/applications/linux_lan9252demo/CMakeLists.txt b/applications/linux_lan9252demo/CMakeLists.txt
+index b7f4417..feecd7e 100644
+--- a/applications/linux_lan9252demo/CMakeLists.txt
++++ b/applications/linux_lan9252demo/CMakeLists.txt
+@@ -1,6 +1,7 @@
+ 
+-add_executable (demo
++add_executable (lan9252demo
+   main.c
+   slave_objectlist.c
+   )
+-target_link_libraries(demo LINK_PUBLIC soes)
++target_link_libraries(lan9252demo LINK_PUBLIC soes)
++install (TARGETS lan9252demo DESTINATION bin)
+diff --git a/soes/CMakeLists.txt b/soes/CMakeLists.txt
+index d39dfd9..eec0041 100644
+--- a/soes/CMakeLists.txt
++++ b/soes/CMakeLists.txt
+@@ -19,7 +19,7 @@ add_library (soes
+ 
+ include_directories(${HAL_INCLUDES})
+ 
+-install (TARGETS soes DESTINATION bin)
++install (TARGETS soes DESTINATION lib)
+ install (FILES
+   esc.h
+   esc_coe.h
+-- 
+2.20.1
+

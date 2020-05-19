@@ -1,0 +1,13 @@
+config BR2_PACKAGE_SOES
+	bool "soes"
+        depends on BR2_LINUX_KERNEL
+	help
+          SOES is an EtherCAT slave stack written in c. Its purpose is
+          to learn and to use. All users are invited to study the
+          source to get an understanding how an EtherCAT slave
+          functions.
+
+          https://github.com/OpenEtherCATsociety/SOES
+
+comment "SOES needs a Linux kernel to be built"
+        depends on !BR2_LINUX_KERNEL

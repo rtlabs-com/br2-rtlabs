@@ -1,0 +1,23 @@
+From 720c003b93896ca32abe163367aa33d3f51e51dd Mon Sep 17 00:00:00 2001
+From: Hans-Erik Floryd <hans-erik.floryd@rt-labs.com>
+Date: Tue, 19 May 2020 11:46:04 +0200
+Subject: [PATCH] disable -Waddress-of-packed-member
+
+Disable warning until it is fixed in upstream SOES.
+---
+ cmake/Linux.cmake | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/cmake/Linux.cmake b/cmake/Linux.cmake
+index 13e0cdd..75a0f8c 100644
+--- a/cmake/Linux.cmake
++++ b/cmake/Linux.cmake
+@@ -11,4 +11,4 @@ set(HAL_SOURCES
+   )
+ 
+ # Common compile flags
+-add_compile_options(-Wall -Wextra -Wno-unused-parameter -Werror)
++add_compile_options(-Wall -Wextra -Wno-unused-parameter -Werror -Wno-address-of-packed-member)
+-- 
+2.20.1
+
