@@ -1,0 +1,13 @@
+config BR2_PACKAGE_SOEM
+	bool "soem"
+	depends on BR2_TOOLCHAIN_HAS_THREADS
+	help
+          SOEM is an EtherCAT master library written in c. Its purpose
+          is to learn and to use. All users are invited to study the
+          source to get an understanding how an EtherCAT master
+          functions and how it interacts with EtherCAT slaves.
+
+          https://github.com/OpenEtherCATsociety/SOEM
+
+comment "soem needs a toolchain w/ threads"
+	depends on !BR2_TOOLCHAIN_HAS_THREADS
