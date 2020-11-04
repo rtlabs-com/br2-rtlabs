@@ -4,8 +4,9 @@
 #
 ################################################################################
 
-P_NET_VERSION = 6b83eb308551acd2469c44964de05770c32c18df
-P_NET_SITE = $(call github,rtlabs-com,p-net,$(P_NET_VERSION))
+P_NET_VERSION = 08abd0431c8bd236e9eabe304772bfd0449e49d4
+P_NET_SITE = git://github.com/rtlabs-com/p-net.git
+P_NET_GIT_SUBMODULES = YES
 P_NET_INSTALL_STAGING = YES
 P_NET_LICENSE = Dual-licensed under GPLv3 or a commercial license
 P_NET_LICENSE_FILES = LICENSE.md

@@ -1,6 +1,6 @@
 config BR2_PACKAGE_C_OPEN
 	bool "c-open"
-	depends on BR2_TOOLCHAIN_HAS_THREADS
+	depends on BR2_PACKAGE_OSAL
 	help
           The rt-labs CANopen stack c-open is used for both master and
           slaves. The stack implements most of CiA 301 and 305
@@ -18,17 +18,5 @@ config BR2_PACKAGE_C_OPEN
 
           https://github.com/rtlabs-com/c-open
 
-if BR2_PACKAGE_C_OPEN
-
-config BR2_PACKAGE_C_OPEN_USE_SCHED_FIFO
-	bool "Use realtime priority threads"
-	default y
-	help
-	  Attempt to use SCHED_FIFO realtime scheduling. Extra
-	  privileges may be required to run the resulting
-	  binaries.
-
-endif # BR2_PACKAGE_C_OPEN
-
-comment "c-open needs a toolchain w/ threads"
-	depends on !BR2_TOOLCHAIN_HAS_THREADS
+comment "c-open needs the osal package"
+	depends on !BR2_PACKAGE_OSAL

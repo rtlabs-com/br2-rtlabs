@@ -4,8 +4,9 @@
 #
 ################################################################################
 
-C_OPEN_VERSION = 245bcf68af47e2c91d4cb68bb22643acefa287b0
-C_OPEN_SITE = $(call github,rtlabs-com,c-open,$(C_OPEN_VERSION))
+C_OPEN_VERSION = 0d67a709c663d3a1f6a2d9be1d2ff6e508ead41f
+C_OPEN_SITE = git://github.com/rtlabs-com/c-open.git
+C_OPEN_GIT_SUBMODULES = YES
 C_OPEN_INSTALL_STAGING = YES
 C_OPEN_LICENSE = Dual-licensed under GPLv3 or a commercial license
 C_OPEN_LICENSE_FILES = LICENSE.md
