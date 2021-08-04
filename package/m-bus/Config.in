@@ -1,0 +1,10 @@
+config BR2_PACKAGE_M_BUS
+	bool "m-bus"
+	depends on BR2_PACKAGE_OSAL
+	help
+          Modbus TCP/RTU stack
+
+          https://github.com/rtlabs-com/m-bus
+
+comment "m-bus needs the osal package"
+	depends on !BR2_PACKAGE_OSAL
