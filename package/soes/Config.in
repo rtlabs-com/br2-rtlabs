@@ -9,5 +9,16 @@ config BR2_PACKAGE_SOES
 
           https://github.com/OpenEtherCATsociety/SOES
 
+if BR2_PACKAGE_SOES
+
+config BR2_PACKAGE_SOES_RPI_ETHERBERRY_DEMO
+	bool "Build RPI demo variant"
+	default n
+	help
+		Builds the IO demo variant for Raspberry pi with EtherBerry
+		Ethercat hat.
+
+endif # BR2_PACKAGE_SOES
+
 comment "SOES needs a Linux kernel to be built"
         depends on !BR2_LINUX_KERNEL
