@@ -5,7 +5,8 @@
 ################################################################################
 
 M_BUS_VERSION = c8193517d020fa1e701bbab4ee0220ef6e90445d
-M_BUS_SITE = git://github.com/rtlabs-com/m-bus.git
+M_BUS_SITE = https://github.com/rtlabs-com/m-bus.git
+M_BUS_SITE_METHOD = git
 M_BUS_GIT_SUBMODULES = YES
 M_BUS_INSTALL_STAGING = YES
 M_BUS_LICENSE = Dual-licensed under GPLv3 or a commercial license
