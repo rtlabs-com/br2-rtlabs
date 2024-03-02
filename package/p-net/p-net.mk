@@ -5,7 +5,8 @@
 ################################################################################
 
 P_NET_VERSION = 08abd0431c8bd236e9eabe304772bfd0449e49d4
-P_NET_SITE = git://github.com/rtlabs-com/p-net.git
+P_NET_SITE = https://github.com/rtlabs-com/p-net.git
+P_NET_SITE_METHOD = git
 P_NET_GIT_SUBMODULES = YES
 P_NET_INSTALL_STAGING = YES
 P_NET_LICENSE = Dual-licensed under GPLv3 or a commercial license
